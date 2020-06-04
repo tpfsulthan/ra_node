@@ -6,7 +6,7 @@ $(document).ready(function(){
       baseUrl = 'http://localhost:3000/';
     } else {
       if (window.location.hostname.indexOf("www") == 0) { window.location = window.location.href.replace("www.",""); }
-      baseUrl = 'https://sulthanallaudeen.com/';
+      baseUrl = 'https://ra-ui-poc.herokuapp.com/';
     }
   $(".loginUser").click(function() {
     var username = $("#username").val();
