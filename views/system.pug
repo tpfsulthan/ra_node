@@ -1,0 +1,64 @@
+extends layout
+
+block content
+
+  <div class="container-fluid">
+
+    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+      <h1 class="h3 mb-0 text-gray-800">Master</h1>
+      <button class="btn btn-primary float-right systemCreateBtn" data-toggle="modal" data-target="#userModal">Create System</button>
+    </div>
+    <div class="row">
+      <div class="table-responsive">
+        <div class="card shadow mb-4">
+          <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-primary">Manage System</h6>
+          </div>
+          <div class="card-body">
+            <table class="table table-bordered" id="example" width="100%" cellspacing="0">
+              <thead>
+                <tr>
+                  <th>Id</th>
+                  <th>Name</th>
+                  <th>System Paths List</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="userModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title popTitle" id="exampleModalLabel"></h5>
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+           <div class="row">
+            <div class="col">
+              <input type="hidden" id="userId">
+              <input type="text" id="systemname" class="form-control" placeholder="System Name">
+            </div>
+            <div class="col">
+              <input type="text" id="hostname" class="form-control" placeholder="Host Name">
+            </div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary closeBtn" type="button" data-dismiss="modal">Cancel</button>
+          <a class="btn btn-primary popBtn addSystem" type="button" data-dismiss="modal" href="javascript:;">Add System</a>
+          <a class="btn btn-primary popBtn editSystem" href="javascript:;">Edit System</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
